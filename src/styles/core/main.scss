@@ -1,0 +1,140 @@
+$ultrawide: 'only screen and (min-width: 1536px)';
+$dekstop: 'only screen and (min-width: 1281px)';
+$laptop: 'only screen and (min-width: 1025px) and (max-width: 1280px)';
+$tablet: 'only screen and (min-width: 768px) and (max-width: 1024px)';
+$tablet-l: 'only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)';
+$phone: 'only screen and (min-width: 320px) and (max-width: 480px)';
+$phone-l: 'only screen and (min-width: 481px) and (max-width: 767px)';
+
+@import 'variables';
+@import 'mixins';
+
+.all-wrapper {
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  background: $bg-color;
+}
+
+.sidebar {
+  box-shadow: 8px 0 8px rgba(0, 0, 0, 0.05);
+  height: 100vh;
+  position: sticky;
+  top: 0;
+
+  &.icon {
+    background-color: #000;
+  }
+
+  .sidebar-header {
+    opacity: 1;
+  }
+
+  .pro-sidebar {
+    min-width: auto;
+    width: auto;
+    height: auto;
+
+    .pro-sidebar-inner {
+      background-color: $d-color-dark-contrast;
+      color: $d-color-primary-contrast;
+      height: calc(100vh - 5rem);
+
+      .pro-sidebar-layout {
+        .pro-menu {
+          .pro-menu-item {
+            &::after {
+              content: '';
+              width: 5px;
+              height: 100%;
+              position: absolute;
+              display: block;
+              top: 0;
+              left: 0;
+              background-color: $d-color-primary-500;
+              opacity: 0;
+              transition: all 0.32s;
+            }
+
+            &#active {
+              background-color: #e7e7e7;
+
+              &::after {
+                opacity: 1;
+              }
+            }
+
+            .pro-inner-item {
+              padding-top: 1rem;
+              padding-bottom: 1rem;
+              color: $d-color-primary-contrast;
+
+              &:hover {
+                background-color: #e7e7e7;
+              }
+
+              .pro-icon-wrapper {
+                background-color: transparent;
+              }
+            }
+
+            .pro-inner-list-item {
+              background-color: transparent;
+            }
+
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.controlRow__root {
+  .col-sm-6 {
+    .btn-group {
+      .btn {
+        &:disabled {
+          background-color: $d-color-dark;
+          opacity: 0.9;
+          border-color: $d-color-dark;
+        }
+      }
+    }
+  }
+}
+
+.notes {
+  @include line-clamp(1);
+}
+
+.fontLoaded {
+  padding-right: 0 !important;
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+}
+
+.notesdisable {
+  height: 194px;
+}
+
+.notes {
+  @include line-clamp(1);
+}
+
+.fontLoaded {
+  padding-right: 0 !important;
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+}
+
+.notesdisable {
+  height: 194px;
+}

@@ -15,6 +15,9 @@ import FontFaceObserver from 'fontfaceobserver';
 
 // Use consistent styling
 import 'sanitize.css/sanitize.css';
+import 'assets/modules/fontawesome-pro-5.11.2/css/all.css';
+import 'styles/core/core.min.css';
+import 'styles/core/main.min.css';
 
 import { App } from 'app';
 
